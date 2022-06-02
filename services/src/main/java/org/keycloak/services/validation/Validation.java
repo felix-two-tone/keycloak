@@ -35,7 +35,7 @@ public class Validation {
 
     // Actually allow same emails like angular. See ValidationTest.testEmailValidation()
     private static final Pattern EMAIL_PATTERN = Pattern.compile("[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*");
-    private static final Pattern USERNAME_PATTERN = Pattern.compile("^[\\p{IsLatin}|\\p{IsCommon}]+$");
+    private static final Pattern USERNAME_PATTERN = Pattern.compile("^[\\p{IsAlnum}]+$");
 
     private static void addError(List<FormMessage> errors, String field, String message, Object... parameters){
         errors.add(new FormMessage(field, message, parameters));
